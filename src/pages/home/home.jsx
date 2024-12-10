@@ -4,7 +4,7 @@ import Sidebar from '../../components/sidebar/sidebar';
 import './home.css';
 
 
-const Home = ({sideBar,text}) => {
+const Home = ({sideBar}) => {
 
   const [cat,setCat]=useState(0)
 
@@ -12,7 +12,7 @@ const Home = ({sideBar,text}) => {
     <>
       <Sidebar sideBar={sideBar} catrgory={cat} setCategory={setCat}/>
       <div className={`container ${sideBar ? "":"large-container"}`}>
-        <Feed catrgory={cat} text={text}/>
+        <Feed catrgory={cat}/>
       </div>
     </>
   )

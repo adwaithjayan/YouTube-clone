@@ -9,18 +9,11 @@ import more_icon from '../../assets/more.png'
 import notification_icon from '../../assets/notification.png'
 import profile_icon from '../../assets/jack.png'
 import { Link } from 'react-router-dom'
-import { useRef } from 'react'
 
 
-const Navbar = ({setSideBar,setText}) => {
-    const searchRef =useRef(null);
+const Navbar = ({setSideBar}) => {
 
-    const handleInput=()=>{
-        if(searchRef.current){
-            const inputValue = searchRef.current.value;
-        setText(inputValue)
-        }
-    }
+   
 
   return (
     <nav className='flex-div'>
@@ -32,8 +25,8 @@ const Navbar = ({setSideBar,setText}) => {
         </div>
         <div className='nav-middle flex-div'>
             <div className="search-box flex-div">
-                <input type="text" placeholder='Search' ref={searchRef}/>
-                <img src={search} alt="search" onClick={handleInput}/>
+                <input type="text" placeholder='Search' />
+                <img src={search} alt="search" />
             </div>
         </div>
         <div className="nav-right flex-div">
